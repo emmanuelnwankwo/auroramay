@@ -5,7 +5,7 @@ import { AppModule } from './app.module';
 import 'dotenv/config';
 
 async function bootstrap() {
-  const port: number = Number(process.env.PORT);
+  const port: number = Number(process.env.PORT) || 3000;
   const app = await NestFactory.create(AppModule);
 
   const options = new DocumentBuilder()
